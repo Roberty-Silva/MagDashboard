@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ptb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,viewport-fit=cover,user-scalable=no">
+    <title>Viking Rise</title>
+    <script src="//statics.igg.com/assets/lib/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//statics.igg.com/assets/lib/slick/slick-1.8.1.min.js"></script>
+
+    <script type="module" crossorigin src="//statics.igg.com/assets/vr/2023/web-celebrity/js/index-v3.js"></script>
+    <link rel="stylesheet" href="//statics.igg.com/assets/vr/2023/web-celebrity/css/index-v3.css">
+
+    <script src="//statics.igg.com/assets/vendor/vue/2.7.14/vue.min.js"></script>
+    <script src="//statics.igg.com/assets/lib/ota/ota.umd.min_1.3.8.js"></script>
+
+    <link rel="icon" href="/favicon.ico?v=20260325">
+
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="RSD6H-JGVHG-5KTYV-GV29E-TY6A3",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"RSD6H-JGVHG-5KTYV-GV29E-TY6A3",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="eyvwkticcdczm2o7u7ma-f-214ef855b-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"909890","ak.ai":parseInt("537709",10),"ak.ol":"0","ak.cr":2,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"4680d112","ak.r":45877,"ak.a2":e,"ak.m":"b","ak.n":"ff","ak.bpcip":"38.43.101.0","ak.cport":11738,"ak.gh":"2.16.196.150","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1776265176","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==RSqrhxr0yIrrWLEj0jilv8youOwWvAfZyui027lPdDu+emz/tCarbiYWISqpl+oFyWmvS6PYydlw0IpIScOTwrq2WhkLwcX9GxjHaWRKtma6at5eqtU6h/ep2Eakv43lFK6VdAZEwpqaqcGVxsvwEdhl+JVbPIOpBpwwpR2LAhI3iY9GOWK4xhiQ6hgni3JQrD0xDPcXOLFTBSNF7iwIj39pjbBjyJxXM1oZ1q5DesDZU6xHoDcYX0vhQhIA8Zd7h2PqIL/fvpqIdg9zjiDVbwlfzK1dIc6s2b+i6OFc0g4TMFjro8vIaB0QrxU9jlnhmAKZ16Dpt0n4S7cnTsFstGSotNEFhSNuvzj8pbb7lmpGGDx1OZtElKiYvsRsxfqg0NQDxxgeJYn+Xc0T9KkQ8J/Ol6KrEXkT21Ldv59syMY=","ak.pv":"319","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<body>
+        <div class="wrap" id="app" @click.once="playBgm()" v-clock>
+        
+            
+            <div class="topbar">
+                <div class="topbar-l">
+                    <div class="logo">
+                        <img src="//statics-global.igg.com/game/1131/news/2023/06/27/044847_649ab07f9cc136591.png" alt="vr-logo">
+                    </div>
+                </div>
+
+                <div class="topbar-r">
+                                        <div class="bgm" :class="{'play':isBgmPlay}" @click.stop="bgmStatus()">
+                        <div class="ico-music"></div>
+                        <audio src="https://statics-global.igg.com/ops/tmp/小酌怡情-Yaalon Lee-54s.wav" loop="loop" ref="bgm"></audio>
+                    </div>
+                    
+                    <a href="javascript:void(0);" class="download-game-btn btn-play bind_btn_play  windows">Baixar</a>
+
+                    <div class="pop" style="display:none;" id="pop_download_tip">
+                        <div class="pop-in">
+                            <div class="dl-btns">
+                                <a href="javascript:;" class="btn-dl-other download-game-mobile-btn">
+                                </a>
+                                <a href="javascript:;" class="btn-dl-windows windows download-pc-game">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section1 " style="background-image: url('https://statics-global.igg.com/game/news/2026/03/17/033653_69b912a571d844568.jpg');" >
+                <div class="in">
+
+                    <!-- qrcode移动端显示 -->
+                    <div class="mod-code">
+                        <div class="dl-btns">
+                            <a href="javascript:void(0);" class="btn-dl-other download-game-mobile-btn"></a>
+                            <a href="javascript:void(0);" class="btn-dl-windows windows download-pc-game"></a>
+
+                                                        <div class="btn-video js-video" @click.stop="isBgmPlay = false" data-dialog="video"></div>
+                                                    </div>
+
+                    </div>
+
+                    
+                    <div class="process compatible-with-progress-bar  ">
+                        <div class="info">
+                            <div class="tit">Downloads</div>
+                            <div class="num">
+                                <span>66</span>/52                            </div>
+                        </div>
+                        <div class="process-bar">
+                            <div class="process-bar-in" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 移动端显示 -->
+                    <a href="javascript:void(0);" @click.stop="smartOpen('download', 1)" class="btn-dl">Baixar</a>
+                </div>
+            </div>
+
+
+            <div class="section2">
+                                <div class="about">
+    <div class="in">
+        <i></i>
+        <div class="desc"><p style="text-align: center;">
+	Viking Rise &eacute; um jogo de estrat&eacute;gia em tempo real multijogador de constru&ccedil;&atilde;o de cidades.</p>
+<p style="text-align: center;">
+	Baixe o Viking Rise pela primeira vez e resgate o Pacote de VR do MagnumOfSpades no valor de 200USD</p></div>
+
+        
+        <a href="javascript:;" class="btn-rule">Regras</a>
+        <a href="javascript:;" onclick="popWin('submit_id', 1)" class="btn-qa">Não recebeu seus presentes?</a>
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+    (function () {
+        var endTime = 1776592799000 + 1000;
+        var interval = null;
+        interval = setInterval(function () {
+            var syhm = endTime - Date.now(); // 剩余毫秒
+            if (syhm >= 0) {
+                $('#countdown_day').text(Math.floor(syhm / 1000 / 60 / 60 / 24));
+                $('#countdown_hour').text(Math.floor(syhm / 1000 / 60 / 60 % 24));
+                $('#countdown_min').text(Math.floor(syhm / 1000 / 60 % 60));
+                $('#countdown_sec').text(Math.floor(syhm / 1000 % 60));
+            } else {
+                $('.rank__status-txt').text("As Classificações de Poder terminaram.");
+                clearInterval(interval);
+            }
+        }, 0);
+    })();
+</script>
+
+<div class="in">
+    <div class="section-hd">
+        <div class="tit">Ranking de Poder</div>
+        <div class="notice">
+            A tabela de líderes é atualizada a cada 15 minutos.
+        </div>
+        <div class="countdown">
+            <div class="timer">
+                <div class="days" id="countdown_day" style="--days:'D'">0</div>
+                <div class="hours" id="countdown_hour" style="--hours:'H'">0</div>
+                <div class="minutes" id="countdown_min" style="--minutes:'M'">0</div>
+                <div class="seconds" id="countdown_sec" style="--seconds:'S'">0</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-bd">
+        <div class="table-rank">
+            <div class="table-row table-hd">
+                <div class="table-td">Classificação</div>
+                <div class="table-td">ID do Chefe</div>
+                                                <div class="table-td">Salão do Chefe</div>
+                                <div class="table-td">Poder</div>
+            </div>
+            <div class="table-body">
+
+                
+                                <div class="table-row">
+                    <div class="table-td">
+                                                <img src="//statics.igg.com/assets/vr/2023/web-celebrity/img/icon_1st.png" alt=''>
+                                            </div>
+                    <div class="table-td">79**7597</div>
+                                                            <div class="table-td">20</div>
+                                        <div class="table-td">4,706,712</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                <img src="//statics.igg.com/assets/vr/2023/web-celebrity/img/icon_2nd.png" alt=''>
+                                            </div>
+                    <div class="table-td">80**0388</div>
+                                                            <div class="table-td">19</div>
+                                        <div class="table-td">3,522,011</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                <img src="//statics.igg.com/assets/vr/2023/web-celebrity/img/icon_3rd.png" alt=''>
+                                            </div>
+                    <div class="table-td">80**4764</div>
+                                                            <div class="table-td">18</div>
+                                        <div class="table-td">2,361,419</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                4                                            </div>
+                    <div class="table-td">80**2115</div>
+                                                            <div class="table-td">17</div>
+                                        <div class="table-td">2,195,178</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                5                                            </div>
+                    <div class="table-td">80**7789</div>
+                                                            <div class="table-td">17</div>
+                                        <div class="table-td">2,023,719</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                6                                            </div>
+                    <div class="table-td">80**7795</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">1,464,219</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                7                                            </div>
+                    <div class="table-td">80**0875</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">1,448,073</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                8                                            </div>
+                    <div class="table-td">80**0842</div>
+                                                            <div class="table-td">17</div>
+                                        <div class="table-td">1,438,195</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                9                                            </div>
+                    <div class="table-td">80**8546</div>
+                                                            <div class="table-td">15</div>
+                                        <div class="table-td">1,402,283</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                10                                            </div>
+                    <div class="table-td">80**7949</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">1,391,831</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                11                                            </div>
+                    <div class="table-td">80**3417</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">1,285,948</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                12                                            </div>
+                    <div class="table-td">80**8121</div>
+                                                            <div class="table-td">15</div>
+                                        <div class="table-td">1,231,718</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                13                                            </div>
+                    <div class="table-td">80**9224</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">1,217,780</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                14                                            </div>
+                    <div class="table-td">80**2980</div>
+                                                            <div class="table-td">15</div>
+                                        <div class="table-td">1,132,373</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                15                                            </div>
+                    <div class="table-td">80**0723</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">1,039,732</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                16                                            </div>
+                    <div class="table-td">80**8736</div>
+                                                            <div class="table-td">14</div>
+                                        <div class="table-td">910,344</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                17                                            </div>
+                    <div class="table-td">80**9729</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">900,924</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                18                                            </div>
+                    <div class="table-td">80**2416</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">777,912</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                19                                            </div>
+                    <div class="table-td">80**8473</div>
+                                                            <div class="table-td">15</div>
+                                        <div class="table-td">618,930</div>
+                </div>
+                                <div class="table-row">
+                    <div class="table-td">
+                                                20                                            </div>
+                    <div class="table-td">80**9656</div>
+                                                            <div class="table-td">14</div>
+                                        <div class="table-td">613,224</div>
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+
+
+            <div class="section4 ex reverse" data-section>
+                <div class="section-hd">
+    <div class="tit">Funções</div>
+</div>
+<div class="section-bd">
+    <div class="multiple-slick">
+        <div class="slick-items">
+                        <div class="slick-item">
+            <img src="https://statics-global.igg.com/game/news/2026/03/17/020954_69b8fe4233b582460.jpg" alt="">
+            </div>
+                        <div class="slick-item">
+            <img src="https://statics-global.igg.com/game/news/2026/03/17/021011_69b8fe53549089824.jpg" alt="">
+            </div>
+                        <div class="slick-item">
+            <img src="https://statics-global.igg.com/game/news/2026/03/17/021027_69b8fe634bc626247.jpg" alt="">
+            </div>
+                        <div class="slick-item">
+            <img src="https://statics-global.igg.com/game/news/2026/03/17/021043_69b8fe739fe7e2658.jpg" alt="">
+            </div>
+                        <div class="slick-item">
+            <img src="https://statics-global.igg.com/game/news/2026/03/17/021059_69b8fe83e7bd34689.jpg" alt="">
+            </div>
+                    </div>
+
+        <!-- Add Pagination -->
+        <div class="dots"></div>
+    </div>
+</div>            </div>
+
+            <footer class="footer">
+                <p class="txt">Siga-nos</p>
+                <div class="share">
+                    <div class="share__list">
+                                                <a href="https://www.tiktok.com/@vikingrise" class="share__list-item douyin"></a>
+                                                <a href="https://www.facebook.com/112884778393485" class="share__list-item facebook"></a>
+                                                <a href="https://www.instagram.com/vikingrise.pt/" class="share__list-item instagram"></a>
+                                                <a href="https://discord.gg/sqXqTBSv3w" class="share__list-item discord"></a>
+                                            </div>
+                </div>
+                        <script src="https://policies.igg.com/global/common_footer?family=igg&lang=eng"></script>            </footer>
+        </div>
+
+        <div class="dialog text" id="dialog_rule" style="display:none">
+            <div class="dialog-in">
+                <div class="dialog-box">
+                    <a href="javascript:;" class="btn-close js-close"></a>
+                    <div class="dialog-hd">
+                        <div class="tit">Regras</div>
+                    </div>
+                    <div class="dialog-bd">
+                        <div class="mod-txt"><div>
+	1. O evento &eacute; v&aacute;lido apenas para jogadores novos. Somente participando atrav&eacute;s do bot&atilde;o &ldquo;Baixar&rdquo; nesta p&aacute;gina do evento voc&ecirc; pode ganhar o pacote no jogo no valor de 200USD!</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Se voc&ecirc; baixar Viking Rise nesta p&aacute;gina, receber&aacute; os seguintes itens no jogo:</div>
+<div>
+	Pedra An&iacute;mica do Or&aacute;culo * 20</div>
+<div>
+	Pedra An&iacute;mica Aben&ccedil;oada * 20</div>
+<div>
+	Fragmento de Her&oacute;i &Eacute;pico * 100</div>
+<div>
+	Acelerador (3h) * 12</div>
+<div>
+	Escudo (8h) * 12</div>
+<div>
+	B&ocirc;nus de colheita (8h) * 12</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Seus presentes ser&atilde;o entregues em at&eacute; 15 minutos ap&oacute;s criar seu primeiro personagem. Conclua [Cap&iacute;tulo 4 &ndash; Derrote os Niflungs Invasores] para desbloquear sua caixa de mensagens.</div>
+<div>
+	&nbsp;</div>
+<div>
+	4. Se voc&ecirc; n&atilde;o recebeu seus presentes, clique em [N&atilde;o recebeu os presentes?] na p&aacute;gina do evento, insira sua ID de Jogador e clique em [Enviar]. Seus presentes ser&atilde;o reenviados em at&eacute; 30 minutos.</div>
+<div>
+	(Observa&ccedil;&atilde;o: Voc&ecirc; deve resgatar seus presentes em at&eacute; 12 horas ap&oacute;s a cria&ccedil;&atilde;o da conta.)</div>
+<div>
+	&nbsp;</div>
+<div>
+	5. Os jogadores novos devem baixar o jogo em um dispositivo onde o Viking Rise n&atilde;o tenha sido instalado anteriormente para serem contabilizados na classifica&ccedil;&atilde;o de poder do evento. Os jogadores participantes devem ter pelo menos 1 milh&atilde;o de poder ao final do evento para serem eleg&iacute;veis &agrave;s recompensas da classifica&ccedil;&atilde;o de poder:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Classifica&ccedil;&atilde;o 1: Pacote no valor de 200USD</div>
+<div>
+	Classifica&ccedil;&atilde;o 2&ndash;5: Pacote no valor de 180USD</div>
+<div>
+	Classifica&ccedil;&atilde;o 6&ndash;10: Pacote no valor de 150USD</div>
+<div>
+	&nbsp;</div>
+<div>
+	Se um jogador baixar o jogo v&aacute;rias vezes a partir do mesmo endere&ccedil;o IP, apenas a primeira conta criada ser&aacute; inclu&iacute;da na tabela de classifica&ccedil;&atilde;o do evento, e este jogador contar&aacute; apenas como 1 instala&ccedil;&atilde;o.</div>
+<div>
+	&nbsp;</div>
+<div>
+	※ Os dados nesta p&aacute;gina s&atilde;o atualizados com atraso. Os dados finais do servidor exibidos ao final do evento determinar&atilde;o a classifica&ccedil;&atilde;o de poder.</div>
+<div>
+	&nbsp;</div>
+<div>
+	6. Informa&ccedil;&otilde;es sobre o Realocator de Reino</div>
+<div>
+	Nas primeiras 48 horas ap&oacute;s criar uma nova conta, os jogadores podem usar o Realocator de Reino para se mudar para outro reino. V&aacute; at&eacute; sua bolsa e depois &quot;Outros&quot; para encontrar o realocator. Ap&oacute;s 48 horas, o realocator desaparecer&aacute;.</div>
+<div>
+	&nbsp;</div>
+<div>
+	7. Todos os participantes concordam com as regras acima. A IGG SINGAPORE PTE. LTD. reserva o direito da interpreta&ccedil;&atilde;o final do evento, suas regras e recompensas.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog text" id="pop_submit_id" style="display:none">
+            <div class="dialog-in">
+                <div class="dialog-box">
+                    <a href="javascript:;" class="btn-close js-close"></a>
+                    <div class="dialog-hd">
+                        <div class="tit"></div>
+                    </div>
+                    <div class="dialog-bd">
+                        <div class="mod-txt">Insira sua ID de Chefe abaixo se não recebeu seus presentes dentro de 15 minutos. Seus presentes serão enviados novamente dentro de 30 minutos.<br />
+Nota: Você deve resgatar seus presentes dentro do prazo de 24 horas.</div>
+                        <div class="mod-way" onclick="popWin('userinfo', 1)">>>Não consegue encontrar sua ID de Chefe?</div>
+                        <div class="mod-id">
+                            <input type="number" id="user_id" placeholder="Insira sua ID de Chefe">
+                        </div>
+                        <a href="javascript:;" onclick="submitUserid()" class="btn-comm btn-submit">Enviar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog award" id="pop_userinfo" style="display:none">
+            <div class="dialog-in">
+                <div class="dialog-box">
+                    <a href="javascript:;" class="btn-close js-close"></a>
+                    <div class="dialog-hd">
+                        <div class="tit">ID do Chefe</div>
+                    </div>
+                    <div class="dialog-bd">
+                        <div class="mod-award">
+                            <img src="//statics.igg.com/assets/vr/2023/web-celebrity/img/price1.png" class="award-step" alt="">
+                            <img src="//statics.igg.com/assets/vr/2023/web-celebrity/img/arr.png" class="arr" alt="">
+                            <img src="//statics.igg.com/assets/vr/2023/web-celebrity/img/price2.png" class="award-step" alt="">
+                            <img src="//statics.igg.com/assets/vr/2023/web-celebrity/img/arr.png" class="arr" alt="">
+                            <span class="txt">ID</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog text" id="pop_progress_bar" style="display: none;">
+            <div class="dialog-in">
+                <div class="dialog-box">
+
+                    <a href="javascript:;" class="btn-close js-close"></a>
+                    <div class="dialog-hd">
+                        <div class="tit">这是标题</div>
+                    </div>
+
+                    <div class="dialog-bd">
+                        <div class="mod-txt">这是文本</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog text" id="pop_alert" style="display: none;">
+            <div class="dialog-in">
+                <div class="dialog-box">
+                    <a href="javascript:;" class="btn-close js-close"></a>
+                    <div class="dialog-hd">
+                        <div class="tit"></div>
+                    </div>
+                    <div class="dialog-bd">
+                        <div class="mod-txt" id="alert_msg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog code" id="pop_other_download_tip" style="display:none;">
+            <div class="dialog-in">
+                <div class="dialog-box">
+                    <a href="javascript:;" class="btn-close js-close" onclick="popWin('pop_other_download_tip', 0);"></a>
+                    <div class="mod-code">
+
+                        <div class="pic">
+                            <canvas id="qrcode"></canvas>
+                        </div>
+
+                        <p>
+                            Abra este link ou leia o <strong class="blue">código QR</strong> para instalar o Viking Rise em seu dispositivo móvel e receber uma recompensa de download.                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 视频弹窗 -->
+        <div class="dialog video" id="video" style="display: none;">
+            <div class="dialog-in">
+                <div class="dialog-box">
+                    <a href="javascript:;" class="btn-close js-close"></a>
+                    <div class="mod-video">
+                        <video src="https://statics-global.igg.com/ops/tmp/sh0023VRCG_30S.mp4" id="media" controls></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var isIOSorAND = false;
+        </script>
+
+        
+        
+        <script>
+            function toCanvas(el, link, logo) {
+                QrCodeWithLogo.toCanvas({
+                    canvas: el,
+                    content: link,
+                    logo: {
+                        src: logo,
+                    },
+                    width: '100%',
+                })
+            }
+
+            $("body").on("click", ".download-game-btn", function (event) {
+                event.stopPropagation()
+
+                if ($(this).hasClass('mobile')) {
+                    location.href = "https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.magnumofspades.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.magnumofspades.20260213";
+                    return;
+                } else {
+                    $("#pop_download_tip").show();
+                    return;
+                }
+            });
+
+            $("body").on("click", ".wrap", function () {
+                $("#pop_download_tip").hide();
+            });
+
+            $("body").on("click", ".download-game-mobile-btn", function () {
+                $('.dialog.code').show()
+                const code = document.getElementById('qrcode')
+                toCanvas(
+                    code,
+                    'https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.magnumofspades.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.magnumofspades.20260213',
+                    '//statics-global.igg.com/game/1131/news/2023/06/27/044847_649ab07f9cc136591.png'
+                )
+            });
+
+            $("body").on("click", ".download-pc-game", function () {
+                if ($(this).hasClass('windows')) {
+                    location.href = "https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.magnumofspades.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.magnumofspades.20260213";
+                } else {
+                    ota.Toast.text('Falha na instalação. Seu sistema operacional é incompatível com este instalador. Toque em &quot;Download Mobile&quot; para baixar a versão mobile.');
+                }
+            });
+
+
+            // 弹窗
+            function popWin(id, val) {
+                if (id == 'download' && isIOSorAND) {
+                    location.href = "https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.magnumofspades.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.magnumofspades.20260213";
+                    return;
+                }
+
+                if (val > 0) {
+                    $('#pop_' + id).show();
+                } else {
+                    $('#pop_' + id).hide();
+                }
+            }
+
+            $(function () {
+                if ($(".compatible-with-progress-bar").hasClass('auto_popup')) {
+                    popWin('progress_bar', 1);
+                }
+
+                // $(".progress-bar").click(function() {
+                //     if ($(this).hasClass('popup')) {
+                //         popWin('progress_bar', 1);
+                //     }
+                // });
+            });
+        </script>
+
+
+        <script>
+            var requesting = false;
+            var playing = false;
+
+            // 提交用户ID
+            function submitUserid() {
+                if (playing) {
+                    return false;
+                } else {
+                    playing = true;
+                }
+
+                var user_id = $('#user_id').val();
+                if (user_id == '') {
+                    $('#alert_msg').text("Insira sua ID de Chefe");
+                    popWin('alert', 1);
+                    playing = false;
+                    return false;
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: 'index.req.php?game_id=11312202021',
+                    data: { act: 'submit_userid', user_id: user_id, code: 'ptb_magnumofspades' },
+                    success: function (json) {
+                        if (json.error.code == 0) {
+                            $('#alert_msg').text(json.error.message);
+                            popWin('alert', 1);
+                        } else {
+                            $('#alert_msg').text(json.error.message);
+                            popWin('alert', 1);
+
+                        }
+
+                        playing = false;
+                        return false;
+                    },
+                    dataType: "json"
+                });
+            }
+
+        </script>
+
+
+        <script>
+            function init() {
+                new Vue({
+                    el: '#app',
+                    data: function () {
+                        return {
+                            isBgmPlay: false,
+                        }
+                    },
+                    methods: {
+                        bgmStatus() {
+                            const audio = this.$refs.bgm
+                            if (audio.paused) {
+                                this.isBgmPlay = true
+                                this.bgmVolume()
+                                console.log('播放')
+                            } else {
+                                this.isBgmPlay = false
+                                audio.pause()
+                                console.log('暂停')
+                            }
+                        },
+                        bgmVolume() {
+                            const audio = this.$refs.bgm
+                            audio.volume = 0; // 初始音量为0
+                            audio.play()
+                            const targetVolume = 1; // 目标音量
+                            const fadeDuration = 5000; // 渐变持续时间（毫秒）
+                            const fadeInterval = 5; // 每次音量增加的时间间隔（毫秒）
+                            const volumeStep = targetVolume / (fadeDuration / fadeInterval); // 每次增加的音量
+
+                            const fadeAudioIn = setInterval(() => {
+                                if (audio.volume < targetVolume) {
+                                    audio.volume = Math.min(audio.volume + volumeStep, targetVolume);
+                                } else {
+                                    clearInterval(fadeAudioIn);
+                                }
+                            }, fadeInterval);
+                        },
+                        playBgm() {
+                            const audio = this.$refs.bgm
+                            if (audio.paused) {
+                                this.bgmVolume()
+                                this.isBgmPlay = true
+                            }
+                        },
+                        smartOpen(id, val) {
+                            popWin(id, val);
+                        }
+                    },
+                })
+            }
+        </script>
+
+        <script src="//statics.igg.com/assets/vr/2023/web-celebrity/js/qr-code-with-logo.browser.min.js"></script>
+        <script src="//statics.igg.com/assets/lib/orientation/orientation.min.js"></script>
+        <script>
+            new ScreenRotationControl({
+                dir: 'landscape', // vertical 竖屏 landscape 横屏
+                tip: '' // 提示语
+            })
+        </script>
+
+
+        <script type="module" crossorigin src="//statics.9458.com/assets/vr/lib/download-notice/1.0.3/prod/js/index.js"></script>
+        <script>
+            window.addEventListener('load', function () {
+                if ($(".download-game-btn").hasClass('windows')) {
+                    new DownloadNotice({
+                        game: 'vr',
+                        theme: '2',
+                        language: 'ptb',
+                        content: `Após baixar, clique no ícone baixado no canto superior esquerdo, e então clique no arquivo para iniciar a instalação.`,
+                        tips: `1. Clique no ícone para baixar <br>2. Clique no arquivo para instalar`,
+                        clickEl: '.windows'
+                    });
+                }
+            });
+        </script>
+
+
+        <!-- Matomo -->
+        <script>
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+                var u = "//d3utfp7z3lprg5.cloudfront.net/";
+                _paq.push(['setTrackerUrl', u + 'matomo.php']);
+                _paq.push(['setSiteId', '23']);
+                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+            })();
+        </script>
+        <!-- End Matomo Code -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculador de Poder — Exportador</title>
+  <link rel="stylesheet" href="/docs/style.css">
+</head>
+<body>
+  <header>
+    <h1>Calculador de Poder — Exportador</h1>
+    <p>Exporte rankings de poder e armazene históricos em CSV.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Arquivos</h2>
+      <ul>
+        <li><a href="../export_power.py">Script: export_power.py</a></li>
+        <li><a href="../requirements.txt">requirements.txt</a></li>
+        <li><a href="../power_export.csv">Arquivo de saída (power_export.csv)</a> — se presente no repositório</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Como usar</h2>
+      <p>Instale dependências e execute o script localmente:</p>
+      <pre><code>pip install -r requirements.txt
+python export_power.py --codes ptb_magnumofspades</code></pre>
+      <p>Opções úteis:</p>
+      <ul>
+        <li><strong>--codes</strong> : lista de códigos separados por vírgula.</li>
+        <li><strong>--codes-file</strong> : arquivo com um código por linha.</li>
+        <li><strong>--output</strong> : arquivo CSV de saída (padrão: power_export.csv).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gráfico de Poder (histórico)</h2>
+      <p id="chart-status">Carregando dados do CSV...</p>
+      <canvas id="powerChart" width="800" height="400"></canvas>
+    </section>
+
+    <section>
+      <h2>Hospedagem</h2>
+      <p>Para publicar no GitHub Pages, configure a fonte Pages para a pasta <code>docs/</code> nas configurações do repositório.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gerado automaticamente. Última extração salva em <code>raw_response_&lt;code&gt;.json</code>.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    async function fetchCsv() {
+      // Prefer aggregated CSV in same folder, then try common locations.
+      const candidates = [
+        'power_by_date.csv',
+        'power_export.csv',
+        '../power_export.csv',
+        '/power_export.csv'
+      ];
+      for (const url of candidates) {
+        try {
+          const res = await fetch(url);
+          if (!res.ok) continue;
+          const text = await res.text();
+          return text;
+        } catch (e) {
+          // continue try next
+        }
+      }
+      throw new Error('CSV não encontrado nas localizações esperadas.');
+    }
+
+    function parseCsv(text) {
+      const lines = text.split(/\r?\n/).filter(Boolean);
+      if (lines.length < 2) return [];
+      const header = lines[0].split(',').map(h => h.trim().replace(/^\"|\"$/g, ''));
+      const powerIdx = header.findIndex(h => h.toLowerCase() === 'power');
+      const dateIdx = header.findIndex(h => h.toLowerCase().includes('extraction_date'));
+      if (powerIdx === -1 || dateIdx === -1) return [];
+      const rows = [];
+      for (let i = 1; i < lines.length; i++) {
+        const cols = lines[i].split(',');
+        const rawPower = cols[powerIdx] ? cols[powerIdx].replace(/\"/g,'').trim() : '';
+        const rawDate = cols[dateIdx] ? cols[dateIdx].replace(/\"/g,'').trim() : '';
+        const power = parseInt((rawPower || '').toString().replace(/[^0-9]/g, '')) || 0;
+        // extrair data YYYY-MM-DD de extraction_date (ISO)
+        let day = rawDate;
+        const tpos = rawDate.indexOf('T');
+        if (tpos > 0) day = rawDate.substring(0, tpos);
+        // se estiver vazio, pular
+        if (!day) continue;
+        rows.push({ day, power });
+      }
+      return rows;
+    }
+
+    function aggregateByDate(rows) {
+      const map = new Map();
+      for (const r of rows) {
+        map.set(r.day, (map.get(r.day) || 0) + Number(r.power));
+      }
+      const items = Array.from(map.entries()).sort((a,b) => new Date(a[0]) - new Date(b[0]));
+      return { labels: items.map(i=>i[0]), values: items.map(i=>i[1]) };
+    }
+
+    async function draw() {
+      const status = document.getElementById('chart-status');
+      try {
+        const csv = await fetchCsv();
+        const rows = parseCsv(csv);
+        if (!rows.length) {
+          status.textContent = 'CSV encontrado mas sem dados válidos (colunas power/extraction_date não detectadas).';
+          return;
+        }
+        const agg = aggregateByDate(rows);
+        status.textContent = '';
+        const ctx = document.getElementById('powerChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: agg.labels,
+            datasets: [{
+              label: 'Soma do Poder por Data',
+              data: agg.values,
+              backgroundColor: 'rgba(11,128,85,0.6)'
+            }]
+          },
+          options: {
+            responsive: true,
+            scales: { y: { beginAtZero: true } }
+          }
+        });
+      } catch (err) {
+        document.getElementById('chart-status').textContent = 'Erro ao carregar CSV: ' + err.message;
+      }
+    }
+
+    draw();
+  </script>
+</body>
+</html>

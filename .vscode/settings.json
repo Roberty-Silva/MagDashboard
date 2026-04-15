@@ -1,0 +1,10 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^& \"C:\\\\Program Files\\\\Python312\\\\python\\.exe\" \"e:/Projetos Pessoais/Calculador de poder/export_power\\.py\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "&": true,
+        "Get-Process": true
+    }
+}
