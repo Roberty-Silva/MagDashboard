@@ -301,9 +301,7 @@ def main() -> None:
     all_keys.add(extraction_key)
 
     existing_rows: List[Dict[str, Any]] = []
-    # tentar carregar histórico do arquivo de saída principal e também da cópia em docs/
-    docs_dir_guess = os.path.join(os.path.dirname(args.output) or '.', 'docs')
-    docs_copy_path = os.path.join(docs_dir_guess, os.path.basename(args.output))
+    # tentar carregar histórico do arquivo de saída principal apenas
     loaded_from = []
     def _load_file(path: str) -> List[Dict[str, Any]]:
         try:
@@ -321,11 +319,6 @@ def main() -> None:
     if os.path.exists(args.output):
         existing_rows.extend(_load_file(args.output))
         loaded_from.append(args.output)
-    if os.path.exists(docs_copy_path):
-        # evitar duplicar caso seja o mesmo caminho
-        if docs_copy_path not in loaded_from:
-            existing_rows.extend(_load_file(docs_copy_path))
-            loaded_from.append(docs_copy_path)
 
     # aplicar filtro de campos se informado
     if args.fields:
@@ -379,73 +372,6 @@ def main() -> None:
                 for r in combined:
                     writer.writerow(r)
             print(f"Copiada versão para site: {docs_full}")
-
-            # gerar CSV agregado por data: power_by_date.csv
-            agg = {}
-            # manter também o timestamp representativo (maior extraction_date) por dia
-            ts_map = {}
-
-            def _extract_date_str(dval: object) -> str:
-                """Retorna somente a data YYYY-MM-DD extraída de vários formatos possíveis."""
-                if not dval:
-                    return ''
-                s = str(dval).strip()
-                # procurar padrão YYYY-MM-DD via regex primeiro
-                m = re.search(r"(\d{4}-\d{2}-\d{2})", s)
-                if m:
-                    return m.group(1)
-                # fallback: separar por 'T' ou espaço
-                if 'T' in s:
-                    return s.split('T', 1)[0]
-                if ' ' in s:
-                    return s.split(' ', 1)[0]
-                return s
-
-            def _parse_datetime(s: str) -> Optional[datetime]:
-                if not s:
-                    return None
-                try:
-                    return datetime.fromisoformat(s)
-                except Exception:
-                    # tentativa simples com regex YYYY-MM-DDTHH:MM:SS
-                    m = re.search(r"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:[.,]\d+)?(?:[+-]\d{2}:?\d{2}|Z)?)", s)
-                    if m:
-                        try:
-                            return datetime.fromisoformat(m.group(1))
-                        except Exception:
-                            return None
-                return None
-
-            for r in combined:
-                d = _extract_date_str(r.get('extraction_date', ''))
-                if not d:
-                    continue
-                try:
-                    p = int(r.get('power') or 0)
-                except Exception:
-                    try:
-                        p = int(re.sub(r"[^0-9]", "", str(r.get('power') or '')) or 0)
-                    except Exception:
-                        p = 0
-                agg[d] = agg.get(d, 0) + p
-
-                # atualizar timestamp representativo (maior)
-                ts = _parse_datetime(str(r.get('extraction_date') or ''))
-                if ts:
-                    prev = ts_map.get(d)
-                    if (prev is None) or (ts > prev):
-                        ts_map[d] = ts
-
-            docs_agg = os.path.join(docs_dir, 'power_by_date.csv')
-            with open(docs_agg, 'w', encoding='utf-8', newline='') as f:
-                w = csv.writer(f)
-                # escrever date como timestamp completo (ISO) representativo do dia
-                w.writerow(['date', 'power_sum'])
-                for date_key in sorted(agg.keys()):
-                    ts = ts_map.get(date_key)
-                    date_value = ts.isoformat() if ts else date_key
-                    w.writerow([date_value, agg[date_key]])
-            print(f"Gerado agregado para site: {docs_agg}")
     except Exception:
         pass
 

@@ -4,58 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Calculador de Poder — Exportador</title>
-  <link rel="stylesheet" href="/docs/style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <header>
-    <h1>Calculador de Poder — Exportador</h1>
-    <p>Exporte rankings de poder e armazene históricos em CSV.</p>
+    <div class="header-content">
+      <img src="./logo.jpg" alt="Magnum of Spades" class="logo">
+      <div class="header-text">
+        <h1>⚡ Calculador de Poder</h1>
+        <p>Tribo Magnum of Spades</p>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Arquivos</h2>
-      <ul>
-        <li><a href="../export_power.py">Script: export_power.py</a></li>
-        <li><a href="../requirements.txt">requirements.txt</a></li>
-        <li><a href="../power_export.csv">Arquivo de saída (power_export.csv)</a> — se presente no repositório</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Como usar</h2>
-      <p>Instale dependências e execute o script localmente:</p>
-      <pre><code>pip install -r requirements.txt
-python export_power.py --codes ptb_magnumofspades</code></pre>
-      <p>Opções úteis:</p>
-      <ul>
-        <li><strong>--codes</strong> : lista de códigos separados por vírgula.</li>
-        <li><strong>--codes-file</strong> : arquivo com um código por linha.</li>
-        <li><strong>--output</strong> : arquivo CSV de saída (padrão: power_export.csv).</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Gráfico de Poder (histórico)</h2>
-      <p id="chart-status">Carregando dados do CSV...</p>
+    <section>      <h2>📈 Histórico de Poder</h2>
+      <p id="chart-status">Carregando gráfico...</p>
       <canvas id="powerChart" width="800" height="400"></canvas>
     </section>
-
-    <section>
-      <h2>Hospedagem</h2>
-      <p>Para publicar no GitHub Pages, configure a fonte Pages para a pasta <code>docs/</code> nas configurações do repositório.</p>
+  </main>
+      <ul>
+        <li>💻 <a href="../export_power.py">Script Python</a> — export_power.py</li>
+        <li>📦 <a href="../requirements.txt">Dependências</a> — requirements.txt</li>
+        <li>📊 <a href="./power_export.csv">Dados Exportados</a> — power_export.csv</li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>Gerado automaticamente. Última extração salva em <code>raw_response_&lt;code&gt;.json</code>.</p>
+    <p>⚡ <strong>MagDashboard</strong> — Calculador de Poder em Tempo Real | Dados atualizados automaticamente</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
     async function fetchCsv() {
-      // Prefer aggregated CSV in same folder, then try common locations.
       const candidates = [
-        'power_by_date.csv',
         'power_export.csv',
         '../power_export.csv',
         '/power_export.csv'
@@ -67,7 +49,7 @@ python export_power.py --codes ptb_magnumofspades</code></pre>
           const text = await res.text();
           return text;
         } catch (e) {
-          // continue try next
+          console.log('Tentando próxima localização:', url);
         }
       }
       throw new Error('CSV não encontrado nas localizações esperadas.');
@@ -76,49 +58,119 @@ python export_power.py --codes ptb_magnumofspades</code></pre>
     function parseCsv(text) {
       const lines = text.split(/\r?\n/).filter(Boolean);
       if (lines.length < 2) return [];
+      
       const header = lines[0].split(',').map(h => h.trim().replace(/^\"|\"$/g, ''));
-
-      // Suporta CSVs agregados: date,power_sum
-      const dateSumIdx = header.findIndex(h => h.toLowerCase() === 'date');
-      const sumIdx = header.findIndex(h => h.toLowerCase() === 'power_sum');
-      if (dateSumIdx !== -1 && sumIdx !== -1) {
-        const rows = [];
-        for (let i = 1; i < lines.length; i++) {
-          const cols = lines[i].split(',');
-          const rawDate = cols[dateSumIdx] ? cols[dateSumIdx].replace(/\"/g,'').trim() : '';
-          const rawPower = cols[sumIdx] ? cols[sumIdx].replace(/\"/g,'').trim() : '';
-          if (!rawDate) continue;
-          const power = parseInt((rawPower || '').toString().replace(/[^0-9]/g, '')) || 0;
-          rows.push({ day: rawDate, power });
-        }
-        return rows;
-      }
-
       const powerIdx = header.findIndex(h => h.toLowerCase() === 'power');
+      const codeIdx = header.findIndex(h => h.toLowerCase() === 'code');
       const dateIdx = header.findIndex(h => h.toLowerCase().includes('extraction_date'));
-      if (powerIdx === -1 || dateIdx === -1) return [];
+      
+      if (powerIdx === -1 || codeIdx === -1 || dateIdx === -1) {
+        console.log('Headers encontrados:', header);
+        console.log('powerIdx:', powerIdx, 'codeIdx:', codeIdx, 'dateIdx:', dateIdx);
+        return [];
+      }
+      
       const rows = [];
       for (let i = 1; i < lines.length; i++) {
-        const cols = lines[i].split(',');
+        const line = lines[i].trim();
+        if (!line) continue;
+        
+        const cols = line.split(',');
         const rawPower = cols[powerIdx] ? cols[powerIdx].replace(/\"/g,'').trim() : '';
-        const rawDate = cols[dateIdx] ? cols[dateIdx].replace(/\"/g,'').trim() : '';
+        const code = cols[codeIdx] ? cols[codeIdx].replace(/\"/g,'').trim() : '';
+        const date = cols[dateIdx] ? cols[dateIdx].replace(/\"/g,'').trim() : '';
+        
         const power = parseInt((rawPower || '').toString().replace(/[^0-9]/g, '')) || 0;
-        let day = rawDate;
-        const tpos = rawDate.indexOf('T');
-        if (tpos > 0) day = rawDate.substring(0, tpos);
-        if (!day) continue;
-        rows.push({ day, power });
+        if (power > 0 && code && date) {
+          rows.push({ code, power, date });
+        }
       }
       return rows;
     }
 
-    function aggregateByDate(rows) {
-      const map = new Map();
-      for (const r of rows) {
-        map.set(r.day, (map.get(r.day) || 0) + Number(r.power));
+    function formatCode(code) {
+      // Transforma "ptb_magnumofspades" em "MagnumOfSpades"
+      if (code.toLowerCase().includes('magnum')) {
+        return 'MagnumOfSpades';
       }
-      const items = Array.from(map.entries()).sort((a,b) => new Date(a[0]) - new Date(b[0]));
-      return { labels: items.map(i=>i[0]), values: items.map(i=>i[1]) };
+      return code;
+    }
+
+    function formatDate(dateStr) {
+      try {
+        const date = new Date(dateStr);
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = date.getFullYear();
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
+        return `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
+      } catch (e) {
+        return dateStr;
+      }
+    }
+
+    function createLineChart(rows) {
+      if (!rows.length) return null;
+      
+      const dataByCode = new Map();
+      for (const r of rows) {
+        if (!dataByCode.has(r.code)) {
+          dataByCode.set(r.code, []);
+        }
+        dataByCode.get(r.code).push({ date: r.date, power: r.power });
+      }
+      
+      const aggregated = new Map();
+      for (const [code, items] of dataByCode.entries()) {
+        const grouped = new Map();
+        for (const item of items) {
+          const key = item.date;
+          grouped.set(key, (grouped.get(key) || 0) + item.power);
+        }
+        aggregated.set(code, Array.from(grouped.entries()).sort((a, b) => new Date(a[0]) - new Date(b[0])));
+      }
+      
+      const allDates = new Set();
+      for (const items of aggregated.values()) {
+        for (const [date] of items) {
+          allDates.add(date);
+        }
+      }
+      const sortedDates = Array.from(allDates).sort((a, b) => new Date(a) - new Date(b));
+      const formattedLabels = sortedDates.map(d => formatDate(d));
+      
+      const colors = [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(75, 192, 192)',
+        'rgb(255, 206, 86)',
+        'rgb(153, 102, 255)',
+        'rgb(255, 159, 64)',
+        'rgb(11, 128, 85)',
+        'rgb(200, 50, 50)'
+      ];
+      
+      const datasets = [];
+      let colorIdx = 0;
+      for (const code of aggregated.keys()) {
+        const items = aggregated.get(code);
+        const dataMap = new Map(items);
+        const values = sortedDates.map(d => dataMap.get(d) || 0);
+        
+        datasets.push({
+          label: formatCode(code),
+          data: values,
+          borderColor: colors[colorIdx % colors.length],
+          backgroundColor: colors[colorIdx % colors.length].replace(')', ', 0.1)').replace('rgb', 'rgba'),
+          borderWidth: 2,
+          fill: false,
+          tension: 0.1
+        });
+        colorIdx++;
+      }
+      return { labels: formattedLabels, datasets };
     }
 
     async function draw() {
@@ -127,29 +179,37 @@ python export_power.py --codes ptb_magnumofspades</code></pre>
         const csv = await fetchCsv();
         const rows = parseCsv(csv);
         if (!rows.length) {
-          status.textContent = 'CSV encontrado mas sem dados válidos (colunas power/extraction_date não detectadas).';
+          status.textContent = 'CSV encontrado mas sem dados válidos (colunas power/code/extraction_date não detectadas).';
           return;
         }
-        const agg = aggregateByDate(rows);
-        status.textContent = '';
+        const chartData = createLineChart(rows);
+        if (!chartData) {
+          status.textContent = 'Erro ao processar dados para gráfico de linha.';
+          return;
+        }
+        status.textContent = `Total de registros: ${rows.length} | Timestamps: ${chartData.labels.length} | Códigos: ${chartData.datasets.length}`;
         const ctx = document.getElementById('powerChart').getContext('2d');
         new Chart(ctx, {
-          type: 'bar',
+          type: 'line',
           data: {
-            labels: agg.labels,
-            datasets: [{
-              label: 'Soma do Poder por Data',
-              data: agg.values,
-              backgroundColor: 'rgba(11,128,85,0.6)'
-            }]
+            labels: chartData.labels,
+            datasets: chartData.datasets
           },
           options: {
             responsive: true,
-            scales: { y: { beginAtZero: true } }
+            plugins: {
+              legend: { display: true },
+              title: { display: true, text: 'Evolução de Poder por Código' }
+            },
+            scales: {
+              x: { title: { display: true, text: 'Data e Hora' } },
+              y: { beginAtZero: true, title: { display: true, text: 'Soma de Poder' } }
+            }
           }
         });
       } catch (err) {
         document.getElementById('chart-status').textContent = 'Erro ao carregar CSV: ' + err.message;
+        console.error(err);
       }
     }
 

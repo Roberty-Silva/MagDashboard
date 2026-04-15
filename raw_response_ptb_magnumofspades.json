@@ -16,7 +16,7 @@
 
     <link rel="icon" href="/favicon.ico?v=20260325">
 
-                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="RSD6H-JGVHG-5KTYV-GV29E-TY6A3",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"RSD6H-JGVHG-5KTYV-GV29E-TY6A3",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="eyvwkticcdczm2o7yfrq-f-019e35fa6-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"909890","ak.ai":parseInt("537709",10),"ak.ol":"0","ak.cr":3,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"15dae83d","ak.r":45877,"ak.a2":e,"ak.m":"b","ak.n":"ff","ak.bpcip":"38.43.101.0","ak.cport":11289,"ak.gh":"2.16.196.141","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1776271715","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==VxBIvWeZGslavVAXU0i7RH8VeFACFNMyb15odoOsttPgZPdTlwbUfQz30x4ydILVFBFbYWNKQkNC9YnzMtM1bUiHFIbOAJ5tecz/F+q5jPfGlMvY97azmIFh7/lQHCxjYEqJDkm9LrXhDdjdlPMY5CmeoNAgoFY+ZQroSn7v19IJpcseEEmXvD2Ifln1C+AeSgB19eNU6Jx0ErXc1g5iqrF2SGJp6Xj6VBXxyhYUb9cV4F7XVU25QwRv0qVPewe1F3l9fkRZ9Tkc7VGyNd3+NnHAixxKBovuC2nG7HJ09dE2S0hgl+wM8kpWmTRp5EOfiq3JH9vz68dfm3Z6x5dDays5W0bbPMFY8tJyX0k7kZ87csCUXrnbgA2tARQjJ1wB7K9dTeO4jIUgEcyeW+3hg5af/1qy0HwRgIdT1+P4tG8=","ak.pv":"319","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="RSD6H-JGVHG-5KTYV-GV29E-TY6A3",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"RSD6H-JGVHG-5KTYV-GV29E-TY6A3",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="eyvwkticcdcy22o75wxa-f-0242e2dc5-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"909890","ak.ai":parseInt("537709",10),"ak.ol":"0","ak.cr":2,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"4e391500","ak.r":45877,"ak.a2":e,"ak.m":"b","ak.n":"ff","ak.bpcip":"38.43.101.0","ak.cport":11460,"ak.gh":"2.16.196.150","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1776283054","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==t62vGg4OWH32KLaibzSy6jmk1Y0afrfGSzlaG1vG9O2CRys3V3wrCGCiv5BU8jVlfImhwJkO3CEWtTQ0lzlS/Gvs3yvOwMlj6cmxQC/QV8wtvGs89dEJG0I+4+hT488jkEGMlMaQdszHYryvpUj+TNkViNM1IKWi+XLbhBjAaOPB6D0URYEUP/NNrx+Yu2ZQXrvzjiFJ6RoZSIFHEzVjrXiVntMNO46RWNOV14D6iSCwlXPAcMDFUrd+kA9qCRIPXVPkk9ZSvhzfghaaRhgVam9/zKzXHXWOOP5TfVnUCkdPe0+/+s1hVG26ChNj+lhL3zYiK/SPoNitJj9Td8XOYo5FVaXTTBsD8QMaqJnAORsQ9gWI0IBt8MPAwUlQDg5YIdpXhc0Y3WyhMVRKqbxks5ZIx3Z+sBAOokBwgHbW5ko=","ak.pv":"319","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
 
 <body>
         <div class="wrap" id="app" @click.once="playBgm()" v-clock>
@@ -149,7 +149,7 @@
                                             </div>
                     <div class="table-td">79**7597</div>
                                                             <div class="table-td">20</div>
-                                        <div class="table-td">4,706,712</div>
+                                        <div class="table-td">4,729,873</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
@@ -157,7 +157,7 @@
                                             </div>
                     <div class="table-td">80**0388</div>
                                                             <div class="table-td">19</div>
-                                        <div class="table-td">3,522,011</div>
+                                        <div class="table-td">3,575,573</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
@@ -179,14 +179,14 @@
                                                 5                                            </div>
                     <div class="table-td">80**7789</div>
                                                             <div class="table-td">17</div>
-                                        <div class="table-td">2,035,938</div>
+                                        <div class="table-td">2,075,200</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 6                                            </div>
                     <div class="table-td">80**7795</div>
                                                             <div class="table-td">16</div>
-                                        <div class="table-td">1,474,952</div>
+                                        <div class="table-td">1,525,795</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
@@ -214,28 +214,28 @@
                                                 10                                            </div>
                     <div class="table-td">80**7949</div>
                                                             <div class="table-td">16</div>
-                                        <div class="table-td">1,391,831</div>
+                                        <div class="table-td">1,401,072</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 11                                            </div>
                     <div class="table-td">80**3417</div>
                                                             <div class="table-td">16</div>
-                                        <div class="table-td">1,285,948</div>
+                                        <div class="table-td">1,340,326</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 12                                            </div>
-                    <div class="table-td">80**9224</div>
-                                                            <div class="table-td">16</div>
-                                        <div class="table-td">1,238,358</div>
+                    <div class="table-td">80**8121</div>
+                                                            <div class="table-td">15</div>
+                                        <div class="table-td">1,265,950</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 13                                            </div>
-                    <div class="table-td">80**8121</div>
-                                                            <div class="table-td">15</div>
-                                        <div class="table-td">1,231,718</div>
+                    <div class="table-td">80**9224</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">1,238,358</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
@@ -256,7 +256,7 @@
                                                 16                                            </div>
                     <div class="table-td">80**8736</div>
                                                             <div class="table-td">14</div>
-                                        <div class="table-td">946,771</div>
+                                        <div class="table-td">961,625</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
