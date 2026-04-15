@@ -77,6 +77,23 @@ python export_power.py --codes ptb_magnumofspades</code></pre>
       const lines = text.split(/\r?\n/).filter(Boolean);
       if (lines.length < 2) return [];
       const header = lines[0].split(',').map(h => h.trim().replace(/^\"|\"$/g, ''));
+
+      // Suporta CSVs agregados: date,power_sum
+      const dateSumIdx = header.findIndex(h => h.toLowerCase() === 'date');
+      const sumIdx = header.findIndex(h => h.toLowerCase() === 'power_sum');
+      if (dateSumIdx !== -1 && sumIdx !== -1) {
+        const rows = [];
+        for (let i = 1; i < lines.length; i++) {
+          const cols = lines[i].split(',');
+          const rawDate = cols[dateSumIdx] ? cols[dateSumIdx].replace(/\"/g,'').trim() : '';
+          const rawPower = cols[sumIdx] ? cols[sumIdx].replace(/\"/g,'').trim() : '';
+          if (!rawDate) continue;
+          const power = parseInt((rawPower || '').toString().replace(/[^0-9]/g, '')) || 0;
+          rows.push({ day: rawDate, power });
+        }
+        return rows;
+      }
+
       const powerIdx = header.findIndex(h => h.toLowerCase() === 'power');
       const dateIdx = header.findIndex(h => h.toLowerCase().includes('extraction_date'));
       if (powerIdx === -1 || dateIdx === -1) return [];
@@ -86,11 +103,9 @@ python export_power.py --codes ptb_magnumofspades</code></pre>
         const rawPower = cols[powerIdx] ? cols[powerIdx].replace(/\"/g,'').trim() : '';
         const rawDate = cols[dateIdx] ? cols[dateIdx].replace(/\"/g,'').trim() : '';
         const power = parseInt((rawPower || '').toString().replace(/[^0-9]/g, '')) || 0;
-        // extrair data YYYY-MM-DD de extraction_date (ISO)
         let day = rawDate;
         const tpos = rawDate.indexOf('T');
         if (tpos > 0) day = rawDate.substring(0, tpos);
-        // se estiver vazio, pular
         if (!day) continue;
         rows.push({ day, power });
       }
