@@ -27,7 +27,7 @@ jobs:
       
       - name: Run export script
         run: |
-          python export_power.py --codes ptb_magnumofspades
+          python export_power.py
       
       - name: Commit and push changes
         run: |
