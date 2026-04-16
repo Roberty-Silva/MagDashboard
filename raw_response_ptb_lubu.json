@@ -16,7 +16,7 @@
 
     <link rel="icon" href="/favicon.ico?v=20260325">
 
-                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="RSD6H-JGVHG-5KTYV-GV29E-TY6A3",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"RSD6H-JGVHG-5KTYV-GV29E-TY6A3",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="eyvwkticcdcrm2pafgiq-f-9a90f6b63-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"909890","ak.ai":parseInt("537709",10),"ak.ol":"0","ak.cr":2,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2eb70985","ak.r":48122,"ak.a2":e,"ak.m":"b","ak.n":"ff","ak.bpcip":"38.43.101.0","ak.cport":11135,"ak.gh":"2.16.196.18","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1776298385","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==LWVKsdsjztTgg9owSL2eIvIDpDJxasQGyM2mAE8X5qPksG5Eq1XzRVM2pau3Za2lqq5U+ICjQXZudRvbsSzCUd16iS1wQ+ssBVN2rNvKRIaBmpeOsbdOQsz75skwVebPjgmqAJQ8JmkX0krHZa6VjlT88xi/Me9sPrb09gsN1+r+PGZxYW6gtoQIJt4B5pcQnBaOlwsVLvq1U6T+X2GHdKCihhOlN30lhtd42nvMIfs5grA6w8wZKHcmWYJEGCag3faVxb87tIbbVxDJhi4+hOV3zlepNgZYYu4vRpE3jVCSfvNmMBS5a9+tGjJyvX1hn8LXuqHnRILMCZ4JaAOjXi8QFGcyLiI2fpNlyCwJV6i4EFYswE7nEI8qQiTdynPyvjWKs0OyAiOH6zieGuo8CuTmd/3EeuxIUHOgrX3IMRg=","ak.pv":"319","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="RSD6H-JGVHG-5KTYV-GV29E-TY6A3",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"RSD6H-JGVHG-5KTYV-GV29E-TY6A3",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="eyvwkticcdcrm2pafgkq-f-fe34a0249-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"909890","ak.ai":parseInt("537709",10),"ak.ol":"0","ak.cr":2,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2eb7f038","ak.r":48122,"ak.a2":e,"ak.m":"b","ak.n":"ff","ak.bpcip":"38.43.101.0","ak.cport":11535,"ak.gh":"2.16.196.18","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1776298389","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==m6xbnW8byBwJrzgX/Gix4/jNc3x+1WbnyIKqWbmiMfVpsKj/jCq9CJHrufkg7lOb6Tpfjqo8+kWRAD0s5Fbh5wiCiLzvJBgF6XVCM2H2Xgnl3EH0vQW6Tmt6xQbW8geqqZIAmiV63Kc+9tx+7MSA+gw+XymcYHObRR7TZfETNa6lnPhZKoxq8R6En/v62jSTIoqQSDee4DWHoTKZ94ar9rQ7BAe5rDg9pzt9Fz4TdWhnbO8CcqNJHERmFmpgrYZz6IXJ8UT0mkjo5CqX5ZJBX/azqsoudpC3P3BwjSeqPb9lzHCjvsk7vzjnO5Ijxbwdom7x12tYO5RF8d7ZZdLpxzLlvgeWEt1l28HaSD4QbOb5p+u2onDZeGUrP9Sa3pfDm0hSVxFxLu939bPHMy5HF3dR4SxiGI0RbV3IWH1yMCc=","ak.pv":"319","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
 
 <body>
         <div class="wrap" id="app" @click.once="playBgm()" v-clock>
@@ -51,7 +51,7 @@
 
             </div>
 
-            <div class="section1 " style="background-image: url('https://statics-global.igg.com/game/news/2026/03/17/033653_69b912a571d844568.jpg');" >
+            <div class="section1 " style="background-image: url('https://statics-global.igg.com/game/news/2026/03/17/033010_69b911128126f6220.jpg');" >
                 <div class="in">
 
                     <!-- qrcode移动端显示 -->
@@ -70,10 +70,10 @@
                         <div class="info">
                             <div class="tit">Downloads</div>
                             <div class="num">
-                                <span>69</span>/52                            </div>
+                                <span>66</span>/74                            </div>
                         </div>
                         <div class="process-bar">
-                            <div class="process-bar-in" style="width: 100%;"></div>
+                            <div class="process-bar-in" style="width: 89.189189189189%;"></div>
                         </div>
                     </div>
                     
@@ -90,7 +90,7 @@
         <div class="desc"><p style="text-align: center;">
 	Viking Rise &eacute; um jogo de estrat&eacute;gia em tempo real multijogador de constru&ccedil;&atilde;o de cidades.</p>
 <p style="text-align: center;">
-	Baixe o Viking Rise pela primeira vez e resgate o Pacote de VR do MagnumOfSpades no valor de 200USD</p></div>
+	Baixe o Viking Rise pela primeira vez e resgate o Pacote de VR do Lubu no valor de 200USD</p></div>
 
         
         <a href="javascript:;" class="btn-rule">Regras</a>
@@ -147,144 +147,144 @@
                     <div class="table-td">
                                                 <img src="//statics.igg.com/assets/vr/2023/web-celebrity/img/icon_1st.png" alt=''>
                                             </div>
-                    <div class="table-td">79**7597</div>
-                                                            <div class="table-td">20</div>
-                                        <div class="table-td">4,768,679</div>
+                    <div class="table-td">80**8303</div>
+                                                            <div class="table-td">19</div>
+                                        <div class="table-td">3,013,140</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 <img src="//statics.igg.com/assets/vr/2023/web-celebrity/img/icon_2nd.png" alt=''>
                                             </div>
-                    <div class="table-td">80**0388</div>
-                                                            <div class="table-td">19</div>
-                                        <div class="table-td">3,597,969</div>
+                    <div class="table-td">80**2961</div>
+                                                            <div class="table-td">17</div>
+                                        <div class="table-td">2,164,352</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 <img src="//statics.igg.com/assets/vr/2023/web-celebrity/img/icon_3rd.png" alt=''>
                                             </div>
-                    <div class="table-td">80**4764</div>
+                    <div class="table-td">80**0055</div>
                                                             <div class="table-td">18</div>
-                                        <div class="table-td">2,517,542</div>
+                                        <div class="table-td">2,067,670</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 4                                            </div>
-                    <div class="table-td">80**2115</div>
+                    <div class="table-td">79**2718</div>
                                                             <div class="table-td">18</div>
-                                        <div class="table-td">2,303,379</div>
+                                        <div class="table-td">1,854,626</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 5                                            </div>
-                    <div class="table-td">80**7789</div>
+                    <div class="table-td">80**5727</div>
                                                             <div class="table-td">17</div>
-                                        <div class="table-td">2,109,008</div>
+                                        <div class="table-td">1,656,101</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 6                                            </div>
-                    <div class="table-td">80**7795</div>
-                                                            <div class="table-td">16</div>
-                                        <div class="table-td">1,525,795</div>
+                    <div class="table-td">80**3276</div>
+                                                            <div class="table-td">17</div>
+                                        <div class="table-td">1,441,094</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 7                                            </div>
-                    <div class="table-td">80**0842</div>
-                                                            <div class="table-td">17</div>
-                                        <div class="table-td">1,504,332</div>
+                    <div class="table-td">80**6330</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">1,405,414</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 8                                            </div>
-                    <div class="table-td">80**8546</div>
-                                                            <div class="table-td">16</div>
-                                        <div class="table-td">1,480,928</div>
+                    <div class="table-td">80**6024</div>
+                                                            <div class="table-td">17</div>
+                                        <div class="table-td">1,304,076</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 9                                            </div>
-                    <div class="table-td">80**0875</div>
+                    <div class="table-td">80**9558</div>
                                                             <div class="table-td">16</div>
-                                        <div class="table-td">1,466,828</div>
+                                        <div class="table-td">1,197,689</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 10                                            </div>
-                    <div class="table-td">80**7949</div>
+                    <div class="table-td">80**2898</div>
                                                             <div class="table-td">16</div>
-                                        <div class="table-td">1,403,999</div>
+                                        <div class="table-td">1,184,452</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 11                                            </div>
-                    <div class="table-td">80**3417</div>
-                                                            <div class="table-td">16</div>
-                                        <div class="table-td">1,352,188</div>
+                    <div class="table-td">80**3361</div>
+                                                            <div class="table-td">15</div>
+                                        <div class="table-td">1,129,908</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 12                                            </div>
-                    <div class="table-td">80**8121</div>
-                                                            <div class="table-td">15</div>
-                                        <div class="table-td">1,265,950</div>
+                    <div class="table-td">80**1844</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">1,087,218</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 13                                            </div>
-                    <div class="table-td">80**9224</div>
-                                                            <div class="table-td">16</div>
-                                        <div class="table-td">1,265,472</div>
+                    <div class="table-td">80**8458</div>
+                                                            <div class="table-td">15</div>
+                                        <div class="table-td">1,038,526</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 14                                            </div>
-                    <div class="table-td">80**2980</div>
-                                                            <div class="table-td">15</div>
-                                        <div class="table-td">1,165,765</div>
+                    <div class="table-td">80**7387</div>
+                                                            <div class="table-td">14</div>
+                                        <div class="table-td">912,797</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 15                                            </div>
-                    <div class="table-td">80**0723</div>
-                                                            <div class="table-td">16</div>
-                                        <div class="table-td">1,039,732</div>
+                    <div class="table-td">80**3311</div>
+                                                            <div class="table-td">15</div>
+                                        <div class="table-td">878,481</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 16                                            </div>
-                    <div class="table-td">80**8736</div>
-                                                            <div class="table-td">14</div>
-                                        <div class="table-td">971,970</div>
+                    <div class="table-td">80**8331</div>
+                                                            <div class="table-td">16</div>
+                                        <div class="table-td">858,111</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 17                                            </div>
-                    <div class="table-td">80**9729</div>
-                                                            <div class="table-td">16</div>
-                                        <div class="table-td">949,688</div>
+                    <div class="table-td">80**7737</div>
+                                                            <div class="table-td">14</div>
+                                        <div class="table-td">577,764</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 18                                            </div>
-                    <div class="table-td">80**2416</div>
-                                                            <div class="table-td">16</div>
-                                        <div class="table-td">800,063</div>
+                    <div class="table-td">80**6807</div>
+                                                            <div class="table-td">11</div>
+                                        <div class="table-td">573,187</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 19                                            </div>
-                    <div class="table-td">80**8473</div>
-                                                            <div class="table-td">15</div>
-                                        <div class="table-td">615,995</div>
+                    <div class="table-td">80**0496</div>
+                                                            <div class="table-td">12</div>
+                                        <div class="table-td">496,600</div>
                 </div>
                                 <div class="table-row">
                     <div class="table-td">
                                                 20                                            </div>
-                    <div class="table-td">80**9656</div>
+                    <div class="table-td">79**4757</div>
                                                             <div class="table-td">14</div>
-                                        <div class="table-td">613,224</div>
+                                        <div class="table-td">469,479</div>
                 </div>
                             </div>
         </div>
@@ -529,7 +529,7 @@ Nota: Você deve resgatar seus presentes dentro do prazo de 24 horas.</div>
                 event.stopPropagation()
 
                 if ($(this).hasClass('mobile')) {
-                    location.href = "https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.magnumofspades.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.magnumofspades.20260213";
+                    location.href = "https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.lubu.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.lubu.20260213";
                     return;
                 } else {
                     $("#pop_download_tip").show();
@@ -546,14 +546,14 @@ Nota: Você deve resgatar seus presentes dentro do prazo de 24 horas.</div>
                 const code = document.getElementById('qrcode')
                 toCanvas(
                     code,
-                    'https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.magnumofspades.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.magnumofspades.20260213',
+                    'https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.lubu.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.lubu.20260213',
                     '//statics-global.igg.com/game/1131/news/2023/06/27/044847_649ab07f9cc136591.png'
                 )
             });
 
             $("body").on("click", ".download-pc-game", function () {
                 if ($(this).hasClass('windows')) {
-                    location.href = "https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.magnumofspades.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.magnumofspades.20260213";
+                    location.href = "https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.lubu.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.lubu.20260213";
                 } else {
                     ota.Toast.text('Falha na instalação. Seu sistema operacional é incompatível com este instalador. Toque em &quot;Download Mobile&quot; para baixar a versão mobile.');
                 }
@@ -563,7 +563,7 @@ Nota: Você deve resgatar seus presentes dentro do prazo de 24 horas.</div>
             // 弹窗
             function popWin(id, val) {
                 if (id == 'download' && isIOSorAND) {
-                    location.href = "https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.magnumofspades.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.magnumofspades.20260213";
+                    location.href = "https://vikingriseglobal.onelink.me/3rj1?af-xp=custom&pid=influencer-ops&c=infl.vr.br.noninct.bd-ops.lubu.20260213&af_web_dp=https%3A%2F%2Fvr.igg.com%2Fdownload_pc%3Fmedia_source%3Dinfluencer-ops%26campaign_name%3Dinfl.vr.br.noninct.bd-ops.lubu.20260213";
                     return;
                 }
 
@@ -611,7 +611,7 @@ Nota: Você deve resgatar seus presentes dentro do prazo de 24 horas.</div>
                 $.ajax({
                     type: "POST",
                     url: 'index.req.php?game_id=11312202021',
-                    data: { act: 'submit_userid', user_id: user_id, code: 'ptb_magnumofspades' },
+                    data: { act: 'submit_userid', user_id: user_id, code: 'ptb_lubu' },
                     success: function (json) {
                         if (json.error.code == 0) {
                             $('#alert_msg').text(json.error.message);

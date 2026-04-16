@@ -97,6 +97,9 @@ def main() -> None:
         return None
 
     # construir lista final de códigos a consultar
+    # Lista padrão fixa de códigos
+    default_codes = ["ptb_magnumofspades", "ptb_cerealforme", "ptb_lubu"]
+    
     codes_list: List[str] = []
     if args.codes:
         codes_list = [c.strip() for c in args.codes.split(",") if c.strip()]
@@ -108,12 +111,8 @@ def main() -> None:
             print(f"Não foi possível ler o arquivo de códigos: {args.codes_file}")
             return
     else:
-        url_code = get_code_from_url(args.url)
-        if url_code:
-            codes_list = [url_code]
-        else:
-            # sem códigos, usar valor literal da URL inteira como fallback único
-            codes_list = [""]
+        # usar lista padrão fixa
+        codes_list = default_codes
 
     # preparar utilitários e acumular resultados
     def build_url_with_code(base_url: str, code: str) -> str:
@@ -135,6 +134,8 @@ def main() -> None:
     }
 
     master_rows: List[Dict[str, Any]] = []
+    extraction_key = "extraction_date"
+    extraction_timestamp = datetime.now(timezone.utc).isoformat()
 
     # percorrer cada código e acumular resultados
     for code in codes_list:
@@ -182,10 +183,8 @@ def main() -> None:
                             entry["code"] = code
                         rows.append(entry)
 
-                    extraction_key = "extraction_date"
-                    now = datetime.now(timezone.utc).isoformat()
                     for r in rows:
-                        r[extraction_key] = now
+                        r[extraction_key] = extraction_timestamp
                         if code:
                             r["code"] = code
 
@@ -243,10 +242,8 @@ def main() -> None:
                         extracted_rows.append(entry)
 
             if extracted_rows:
-                extraction_key = "extraction_date"
-                now = datetime.now(timezone.utc).isoformat()
                 for r in extracted_rows:
-                    r[extraction_key] = now
+                    r[extraction_key] = extraction_timestamp
                     if code:
                         r["code"] = code
                 master_rows.extend(extracted_rows)
@@ -274,10 +271,8 @@ def main() -> None:
             continue
 
         # anexar extra info e normalizar power
-        extraction_key = "extraction_date"
-        now = datetime.now(timezone.utc).isoformat()
         for r in rows:
-            r[extraction_key] = now
+            r[extraction_key] = extraction_timestamp
             if code:
                 r["code"] = code
             if "power" in r and r["power"] is not None:
