@@ -203,7 +203,32 @@
             responsive: true,
             plugins: {
               legend: { display: true },
-              title: { display: true, text: 'Evolução de Poder por Código' }
+              title: { display: true, text: 'Evolução de Poder por Código' },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    const datasetLabel = context.dataset.label || '';
+                    const value = context.parsed.y || 0;
+                    return datasetLabel + ': ' + value.toLocaleString('pt-BR');
+                  },
+                  afterLabel: function(context) {
+                    const dataIndex = context.dataIndex;
+                    const currentValue = context.parsed.y || 0;
+                    const allDatasets = context.chart.data.datasets;
+                    let lines = [];
+                    
+                    for (let i = 0; i < allDatasets.length; i++) {
+                      if (i === context.datasetIndex) continue;
+                      const otherValue = allDatasets[i].data[dataIndex] || 0;
+                      const diff = currentValue - otherValue;
+                      const diffFormatted = Math.abs(diff).toLocaleString('pt-BR');
+                      const diffText = diff >= 0 ? '+' + diffFormatted : '-' + diffFormatted;
+                      lines.push('vs ' + allDatasets[i].label + ': ' + diffText);
+                    }
+                    return lines.length > 0 ? lines.join('\n') : '';
+                  }
+                }
+              }
             },
             scales: {
               x: { title: { display: true, text: 'Data e Hora' } },
