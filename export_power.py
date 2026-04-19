@@ -98,7 +98,7 @@ def main() -> None:
 
     # construir lista final de códigos a consultar
     # Lista padrão fixa de códigos
-    default_codes = ["ptb_magnumofspades", "ptb_cerealforme", "ptb_lubu"]
+    default_codes = ["ptb_magnumofspades", "ptb_cerealforme", "ptb_lubu", "ptb_byspeed"]
     
     codes_list: List[str] = []
     if args.codes:
